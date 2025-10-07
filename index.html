@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Sinh Nhật Vô Tri Nhưng Vui! 🎉</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading screen -->
+    <div class="loading" id="loading">
+        <div class="loading-text">🎂 Đang chuẩn bị điều gì đó... 🎂</div>
+    </div>
+
+    <!-- Background music and sound effects -->
+    <audio id="bgMusic" loop preload="auto">
+        <!-- Fallback to Web Audio API generated music -->
+    </audio>
+    
+    <!-- Sound effect audios -->
+    <audio id="clickSound" preload="auto"></audio>
+    <audio id="confettiSound" preload="auto"></audio>
+    <audio id="blowSound" preload="auto"></audio>
+    <audio id="giftOpenSound" preload="auto"></audio>
+
+    <!-- Music control -->
+    <div class="music-control" onclick="toggleMusic()">
+        <span id="musicIcon">🎵</span>
+    </div>
+
+    <div class="container">
+        <!-- Confetti container -->
+        <div class="confetti-container" id="confettiContainer"></div>
+        
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title shake">🎂 HAPPY BIRTHDAY! 🎂</h1>
+            <p class="subtitle">Chúc mừng sinh nhật bạn thân...!</p>
+        </header>
+
+        <!-- Phần 1: Ảnh meme sinh nhật -->
+        <section class="meme-section" id="memeSection">
+            <div class="meme-container">
+                <div class="meme-slide active">
+                    <div class="meme-content">
+                        <!-- Nội dung sẽ được load động -->
+                    </div>
+                </div>
+                
+                <div class="meme-slide">
+                    <div class="meme-content">
+                        <!-- Nội dung sẽ được load động -->
+                    </div>
+                </div>
+                
+                <div class="meme-slide">
+                    <div class="meme-content">
+                        <!-- Nội dung sẽ được load động -->
+                    </div>
+                </div>
+                
+                <div class="meme-slide">
+                    <div class="meme-content">
+                        <!-- Nội dung sẽ được load động -->
+                    </div>
+                </div>
+                
+                <!-- Progress bar -->
+                <div class="meme-progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+            
+            <!-- Next button -->
+            <button class="next-button">
+                🎂 Đi thổi nến nào!
+            </button>
+        </section>
+
+        <!-- Phần 2: Bánh sinh nhật (ẩn ban đầu) -->
+        <section class="cake-section hidden" id="cakeSection">
+            <div class="cake-container">
+                <div class="birthday-cake">
+                    <!-- Tầng dưới -->
+                    <div class="cake-layer layer-bottom">
+                        <div class="cake-decoration">🌸</div>
+                        <div class="cake-decoration">🌺</div>
+                        <div class="cake-decoration">🌼</div>
+                    </div>
+                    
+                    <!-- Tầng trên -->
+                    <div class="cake-layer layer-top">
+                        <div class="cake-decoration">🍓</div>
+                        <div class="cake-decoration">🍒</div>
+                    </div>
+                    
+                    <!-- Nến -->
+                    <div class="candle candle1">
+                        <div class="flame" id="flame1"></div>
+                    </div>
+                    <div class="candle candle2">
+                        <div class="flame" id="flame2"></div>
+                    </div>
+                    <div class="candle candle3">
+                        <div class="flame" id="flame3"></div>
+                    </div>
+                    <div class="candle candle4">
+                        <div class="flame" id="flame4"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="blow-button" onclick="blowCandles()">
+                🎈 Thổi nến!
+            </button>
+            
+            <div class="blow-result hidden" id="blowResult">
+                <div class="result-text">Thổi giỏi đấy, không tắt máy là may rồi! 😜</div>
+                <button class="next-button" onclick="goToGiftSection()">
+                    🎁 Nhận quà ngay!
+                </button>
+            </div>
+        </section>
+
+        <!-- Phần 3: Món quà và lời chúc (ẩn ban đầu) -->
+        <section class="gift-section hidden" id="giftSection">
+            <div class="gift-container">
+                <div class="gift-box" id="giftBox" onclick="openGift()">
+                    <div class="gift-body"></div>
+                    <div class="gift-lid"></div>
+                    <div class="gift-ribbon"></div>
+                    <div class="gift-bow">🎀</div>
+                    <div class="gift-sparkle">✨</div>
+                </div>
+                <p class="gift-instruction">Click vào hộp quà để nhận điều bất ngờ 🤫</p>
+            </div>
+            
+            <!-- Lời chúc ẩn -->
+            <div class="wish-reveal hidden" id="wishReveal">
+                <div class="wish-container">
+                    <div class="wish-header">🎉 SURPRISE! 🎉</div>
+                    <div class="wish-text" id="wishText"></div>
+                    <div class="wish-footer">
+                        <button class="troll-button" onclick="trollBack()">
+                            💬 Gửi lại lời chúc cho tôi 😎
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
