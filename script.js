@@ -208,11 +208,11 @@ const memes = [
     },
     {
         image: "img/e27d6189-eabd-48c4-b1d3-da06f52d93a9.jfif",
-        caption: "Tuổi mới hạnh phúc và thành công! 🎁",
+        caption: "Happy Birthday! ",
     },
     {
         image: "img/faf06597-a87e-43ce-9834-1fb74ca714c7.jfif",
-        caption: "Tuổi mới hạnh phúc và thành công! 🎁",
+        caption: "Chúc mừng sinh nhật",
     },
 ];
 
@@ -336,7 +336,7 @@ function startMemeSlideshow() {
                 setTimeout(() => {
                     goToCake();
                 }, 1000);
-            }, 3000); // Đợi 3 giây để hiển thị meme cuối cùng
+            }, 1000); // Đợi 3 giây để hiển thị meme cuối cùng
         }
     }, 3500); // Thời gian mỗi slide
 }
@@ -354,7 +354,7 @@ function showMeme(index) {
         if (memeContent && memes[index]) {
             // Hiển thị loading state trước
             memeContent.innerHTML = `
-                <div class="meme-image loading" style="width: 500px; height: 400px; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px;">
+                <div class="meme-image loading" style="width: 300px; height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px;">
                     Đang tải ảnh... 📸
                 </div>
                 <div class="meme-caption">${memes[index].caption}</div>
@@ -508,17 +508,6 @@ function openGift() {
         if (giftBox) giftBox.style.display = "none";
         if (instruction) instruction.style.display = "none";
         if (wishReveal) wishReveal.classList.remove("hidden");
-
-        // Add wish text content
-        const wishText = document.querySelector("#wishText");
-        if (wishText) {
-            wishText.innerHTML = `
-                <div style="font-size: 1.5rem; color: #ff6b6b; margin-bottom: 20px;">🎂 Lời chúc sinh nhật! 🎂</div>
-                <div>Chúc bạn sinh nhật vui vẻ, hạnh phúc và luôn tươi cười!</div>
-                <div>Mong bạn có thật nhiều niềm vui và thành công trong tuổi mới!</div>
-                <div style="margin-top: 20px; font-style: italic;">❤️ Từ người bạn hài hước của bạn ❤️</div>
-            `;
-        }
 
         createConfetti();
         createHeartRain();
