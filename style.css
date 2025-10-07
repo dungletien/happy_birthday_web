@@ -16,8 +16,15 @@ body {
 }
 
 @keyframes gradientShift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 /* Sparkle background effect */
@@ -28,11 +35,11 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
-        radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.9), transparent),
-        radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.7), transparent),
-        radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.8), transparent),
-        radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent);
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.9), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.7), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.6), transparent);
     background-repeat: repeat;
     background-size: 150px 100px;
     animation: sparkleMove 10s linear infinite;
@@ -41,8 +48,13 @@ body::before {
 }
 
 @keyframes sparkleMove {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(-100px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-100px);
+    }
 }
 
 .container {
@@ -76,12 +88,19 @@ body::before {
     font-size: 2rem;
     text-align: center;
     animation: loadingBounce 1.5s infinite;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes loadingBounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 /* Music control */
@@ -89,7 +108,7 @@ body::before {
     position: fixed;
     top: 20px;
     right: 20px;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -98,7 +117,7 @@ body::before {
     justify-content: center;
     cursor: pointer;
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255,0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
     z-index: 100;
     font-size: 1.5rem;
     transition: all 0.3s ease;
@@ -106,22 +125,23 @@ body::before {
 
 .music-control:hover {
     transform: scale(1.1);
-    background: rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.3);
 }
 
 /* Header */
 .header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     z-index: 10;
+    white-space: nowrap;
 }
 
 .title {
     font-size: 3.5rem;
     color: #fff;
-    text-shadow: 
-        3px 3px 6px rgba(0,0,0,0.8),
-        0 0 30px rgba(255,255,255,0.5);
+    text-shadow:
+        3px 3px 6px rgba(0, 0, 0, 0.8),
+        0 0 30px rgba(255, 255, 255, 0.5);
     margin-bottom: 15px;
     font-family: 'Baloo 2', cursive;
     font-weight: 700;
@@ -132,18 +152,37 @@ body::before {
 }
 
 @keyframes shakeTitle {
-    0%, 100% { transform: translateX(0); }
-    10% { transform: translateX(-5px) rotate(-1deg); }
-    20% { transform: translateX(5px) rotate(1deg); }
-    30% { transform: translateX(-3px) rotate(-1deg); }
-    40% { transform: translateX(3px) rotate(1deg); }
-    50% { transform: translateX(0); }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10% {
+        transform: translateX(-5px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translateX(5px) rotate(1deg);
+    }
+
+    30% {
+        transform: translateX(-3px) rotate(-1deg);
+    }
+
+    40% {
+        transform: translateX(3px) rotate(1deg);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
 }
 
 .subtitle {
     font-size: 1.5rem;
     color: #fff;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     font-weight: 400;
 }
 
@@ -167,12 +206,12 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255,255,255,0.95);
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 25px;
     border: 5px solid #fff;
-    box-shadow: 
-        0 20px 60px rgba(0,0,0,0.3),
-        inset 0 2px 10px rgba(255,255,255,0.8);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.3),
+        inset 0 2px 10px rgba(255, 255, 255, 0.8);
     opacity: 0;
     transform: scale(0.8) rotateY(90deg);
     transition: all 0.8s ease;
@@ -188,9 +227,19 @@ body::before {
 }
 
 @keyframes memeVibrate {
-    0%, 100% { transform: scale(1) rotate(0deg); }
-    25% { transform: scale(1.02) rotate(0.5deg); }
-    75% { transform: scale(0.98) rotate(-0.5deg); }
+
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    25% {
+        transform: scale(1.02) rotate(0.5deg);
+    }
+
+    75% {
+        transform: scale(0.98) rotate(-0.5deg);
+    }
 }
 
 .meme-content {
@@ -210,32 +259,44 @@ body::before {
     height: auto;
     border-radius: 15px;
     margin-bottom: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     object-fit: contain;
     animation: memeImageFloat 3s ease-in-out infinite;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
 }
 
 .meme-image:hover {
     transform: scale(1.05);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 .meme-image.loading {
-    background: linear-gradient(90deg, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.1) 75%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 75%);
     background-size: 200% 100%;
     animation: shimmer 1.5s infinite;
 }
 
 @keyframes shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
 }
 
 @keyframes memeImageFloat {
-    0%, 100% { transform: scale(1) rotate(0deg); }
-    50% { transform: scale(1.02) rotate(1deg); }
+
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.02) rotate(1deg);
+    }
 }
 
 .meme-emoji {
@@ -245,8 +306,15 @@ body::before {
 }
 
 @keyframes emojiSpin {
-    0%, 100% { transform: rotate(0deg) scale(1); }
-    50% { transform: rotate(10deg) scale(1.1); }
+
+    0%,
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(10deg) scale(1.1);
+    }
 }
 
 .meme-text {
@@ -254,7 +322,7 @@ body::before {
     font-weight: 700;
     color: #2d3436;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     line-height: 1.2;
 }
 
@@ -272,7 +340,7 @@ body::before {
     left: 20px;
     right: 20px;
     height: 8px;
-    background: rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     overflow: hidden;
 }
@@ -298,20 +366,23 @@ body::before {
     cursor: pointer;
     font-family: 'Baloo 2', cursive;
     font-weight: 700;
-    box-shadow: 
+    box-shadow:
         0 10px 30px rgba(253, 121, 168, 0.4),
-        inset 0 2px 5px rgba(255,255,255,0.3);
+        inset 0 2px 5px rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     animation: buttonPulse 2s ease-in-out infinite;
 }
 
 @keyframes buttonPulse {
-    0%, 100% { 
+
+    0%,
+    100% {
         transform: scale(1);
         box-shadow: 0 10px 30px rgba(253, 121, 168, 0.4);
     }
-    50% { 
+
+    50% {
         transform: scale(1.05);
         box-shadow: 0 15px 40px rgba(253, 121, 168, 0.6);
     }
@@ -350,28 +421,35 @@ body::before {
     position: relative;
     display: inline-block;
     animation: cakeFloat 4s ease-in-out infinite;
-    filter: drop-shadow(0 30px 60px rgba(0,0,0,0.4));
+    filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.4));
 }
 
 @keyframes cakeFloat {
-    0%, 100% { transform: translateY(0px) rotateY(0deg); }
-    50% { transform: translateY(-10px) rotateY(5deg); }
+
+    0%,
+    100% {
+        transform: translateY(0px) rotateY(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotateY(5deg);
+    }
 }
 
 .cake-layer {
     border-radius: 50%;
     margin: 0 auto;
     position: relative;
-    border: 4px solid rgba(255,255,255,0.8);
+    border: 4px solid rgba(255, 255, 255, 0.8);
 }
 
 .layer-bottom {
     width: 200px;
     height: 80px;
     background: linear-gradient(45deg, #ff6b6b, #ff8e53, #ff6b6b);
-    box-shadow: 
-        0 10px 30px rgba(0,0,0,0.4),
-        inset 0 4px 10px rgba(255,255,255,0.4);
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4),
+        inset 0 4px 10px rgba(255, 255, 255, 0.4);
 }
 
 .layer-top {
@@ -379,9 +457,9 @@ body::before {
     height: 60px;
     background: linear-gradient(45deg, #a29bfe, #fd79a8, #a29bfe);
     margin-top: -15px;
-    box-shadow: 
-        0 10px 30px rgba(0,0,0,0.4),
-        inset 0 4px 10px rgba(255,255,255,0.4);
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4),
+        inset 0 4px 10px rgba(255, 255, 255, 0.4);
 }
 
 .cake-decoration {
@@ -390,16 +468,46 @@ body::before {
     animation: decorationTwinkle 2s ease-in-out infinite;
 }
 
-.layer-bottom .cake-decoration:nth-child(1) { top: 15px; left: 30px; }
-.layer-bottom .cake-decoration:nth-child(2) { top: 10px; right: 25px; animation-delay: 0.5s; }
-.layer-bottom .cake-decoration:nth-child(3) { bottom: 15px; left: 50%; transform: translateX(-50%); animation-delay: 1s; }
+.layer-bottom .cake-decoration:nth-child(1) {
+    top: 15px;
+    left: 30px;
+}
 
-.layer-top .cake-decoration:nth-child(1) { top: 10px; left: 25px; animation-delay: 0.3s; }
-.layer-top .cake-decoration:nth-child(2) { top: 8px; right: 20px; animation-delay: 0.8s; }
+.layer-bottom .cake-decoration:nth-child(2) {
+    top: 10px;
+    right: 25px;
+    animation-delay: 0.5s;
+}
+
+.layer-bottom .cake-decoration:nth-child(3) {
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 1s;
+}
+
+.layer-top .cake-decoration:nth-child(1) {
+    top: 10px;
+    left: 25px;
+    animation-delay: 0.3s;
+}
+
+.layer-top .cake-decoration:nth-child(2) {
+    top: 8px;
+    right: 20px;
+    animation-delay: 0.8s;
+}
 
 @keyframes decorationTwinkle {
-    0%, 100% { transform: scale(1) rotate(0deg); }
-    50% { transform: scale(1.2) rotate(10deg); }
+
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.2) rotate(10deg);
+    }
 }
 
 /* Nến */
@@ -411,22 +519,33 @@ body::before {
     border-radius: 8px 8px 3px 3px;
     top: -50px;
     border: 2px solid #d63031;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
-.candle1 { left: 25%; }
-.candle2 { left: 40%; }
-.candle3 { left: 55%; }
-.candle4 { left: 70%; }
+.candle1 {
+    left: 25%;
+}
+
+.candle2 {
+    left: 40%;
+}
+
+.candle3 {
+    left: 55%;
+}
+
+.candle4 {
+    left: 70%;
+}
 
 .flame {
     width: 12px;
     height: 18px;
-    background: 
-        radial-gradient(circle at center bottom, 
-            #ffeb3b 0%, 
-            #ff9800 30%, 
-            #ff5722 60%, 
+    background:
+        radial-gradient(circle at center bottom,
+            #ffeb3b 0%,
+            #ff9800 30%,
+            #ff5722 60%,
             #d32f2f 80%);
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
     position: absolute;
@@ -434,17 +553,18 @@ body::before {
     left: 50%;
     transform: translateX(-50%);
     animation: flameFlicker 1s ease-in-out infinite alternate;
-    box-shadow: 
+    box-shadow:
         0 0 20px rgba(255, 165, 0, 0.8),
         0 0 40px rgba(255, 69, 0, 0.6);
 }
 
 @keyframes flameFlicker {
-    0% { 
+    0% {
         transform: translateX(-50%) rotate(-2deg) scale(1);
         opacity: 1;
     }
-    100% { 
+
+    100% {
         transform: translateX(-50%) rotate(2deg) scale(1.1);
         opacity: 0.9;
     }
@@ -461,18 +581,21 @@ body::before {
     cursor: pointer;
     font-family: 'Baloo 2', cursive;
     font-weight: 700;
-    box-shadow: 
+    box-shadow:
         0 10px 30px rgba(0, 206, 201, 0.4),
-        inset 0 2px 5px rgba(255,255,255,0.3);
+        inset 0 2px 5px rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
     animation: blowPulse 2s ease-in-out infinite;
 }
 
 @keyframes blowPulse {
-    0%, 100% { 
+
+    0%,
+    100% {
         transform: scale(1);
     }
-    50% { 
+
+    50% {
         transform: scale(1.05);
     }
 }
@@ -497,7 +620,7 @@ body::before {
 .result-text {
     font-size: 1.5rem;
     color: #fff;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     margin-bottom: 20px;
     font-weight: 600;
 }
@@ -530,8 +653,15 @@ body::before {
 }
 
 @keyframes giftBounce {
-    0%, 100% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(-10px) scale(1.05); }
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-10px) scale(1.05);
+    }
 }
 
 .gift-box:hover {
@@ -544,9 +674,9 @@ body::before {
     background: linear-gradient(45deg, #ffd700, #ffb347);
     border-radius: 15px;
     border: 4px solid #ff6b6b;
-    box-shadow: 
-        0 15px 40px rgba(0,0,0,0.4),
-        inset 0 4px 10px rgba(255,255,255,0.4);
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.4),
+        inset 0 4px 10px rgba(255, 255, 255, 0.4);
     position: relative;
 }
 
@@ -559,7 +689,7 @@ body::before {
     background: linear-gradient(45deg, #ff6b6b, #ff8e53);
     border-radius: 10px;
     border: 3px solid #d63031;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 .gift-ribbon {
@@ -571,7 +701,7 @@ body::before {
     height: 150px;
     background: linear-gradient(180deg, #ff6b6b, #d63031);
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .gift-bow {
@@ -584,8 +714,15 @@ body::before {
 }
 
 @keyframes bowSpin {
-    0%, 100% { transform: translateX(-50%) rotate(0deg); }
-    50% { transform: translateX(-50%) rotate(10deg); }
+
+    0%,
+    100% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    50% {
+        transform: translateX(-50%) rotate(10deg);
+    }
 }
 
 .gift-sparkle {
@@ -597,24 +734,34 @@ body::before {
 }
 
 @keyframes sparkleFloat {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-10px) rotate(180deg); }
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(180deg);
+    }
 }
 
 .gift-instruction {
     color: #fff;
     font-size: 1.4rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     margin-top: 20px;
     animation: instructionGlow 2s ease-in-out infinite;
 }
 
 @keyframes instructionGlow {
-    0%, 100% { 
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+
+    0%,
+    100% {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
-    50% { 
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.7), 0 0 20px rgba(255,255,255,0.8);
+
+    50% {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 255, 255, 0.8);
     }
 }
 
@@ -631,13 +778,13 @@ body::before {
 }
 
 .wish-container {
-    background: rgba(255,255,255,0.95);
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 25px;
     padding: 40px;
     border: 5px solid #fff;
-    box-shadow: 
-        0 20px 60px rgba(0,0,0,0.3),
-        inset 0 2px 10px rgba(255,255,255,0.8);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.3),
+        inset 0 2px 10px rgba(255, 255, 255, 0.8);
     position: relative;
     overflow: hidden;
 }
@@ -649,13 +796,18 @@ body::before {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
     animation: wishShimmer 3s infinite;
 }
 
 @keyframes wishShimmer {
-    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
 }
 
 .wish-header {
@@ -667,8 +819,15 @@ body::before {
 }
 
 @keyframes headerBounce {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
 }
 
 .wish-text {
@@ -722,6 +881,7 @@ body::before {
         transform: translateY(-100vh) rotate(0deg);
         opacity: 1;
     }
+
     100% {
         transform: translateY(100vh) rotate(720deg);
         opacity: 0;
@@ -733,55 +893,55 @@ body::before {
     .title {
         font-size: 2.5rem;
     }
-    
+
     .subtitle {
         font-size: 1.2rem;
     }
-    
+
     .meme-text {
         font-size: 1.8rem;
     }
-    
+
     .meme-caption {
         font-size: 1.1rem;
     }
-    
+
     .meme-container {
         height: 400px;
     }
-    
+
     .meme-content {
         padding: 30px 20px;
     }
-    
+
     .meme-image {
         max-height: 250px;
         margin-bottom: 15px;
     }
-    
+
     .meme-caption {
         font-size: 1.1rem;
     }
-    
+
     .next-button {
         padding: 15px 30px;
         font-size: 1.2rem;
     }
-    
+
     .layer-bottom {
         width: 160px;
         height: 65px;
     }
-    
+
     .layer-top {
         width: 110px;
         height: 50px;
     }
-    
+
     .wish-text {
         font-size: 1.3rem;
     }
-    
+
     .wish-container {
         padding: 30px 20px;
     }
